@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "ds-digi";
+    src: url(fonts/wwDigital.ttf);
+}
+
+@font-face {
+    font-family: "hack";
+    src: url(fonts/Hack-Bold.ttf);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.clock{
+    color: white;
+    border: 7px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.days{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: "hack";
+    margin-left: 10px;
+}
+
+.time{
+    display: flex;
+    justify-content: space-between;
+    font-size: 250px;
+    align-items: center;
+    font-family: 'ds-digi';
+}
+
+.hours{
+    position: relative;
+    width: 45%;
+}
+
+.hours::after{
+    content: "88";
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgba(255,255,255,0.1);
+}
+
+.minutes{
+    position: relative;
+    width: 45%;
+}
+
+.minutes::after{
+    content: "88";
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgba(255,255,255,0.1);
+}
