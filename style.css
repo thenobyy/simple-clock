@@ -1,6 +1,6 @@
 @font-face {
     font-family: "ds-digi";
-    src: url(fonts/digital-7.ttf);
+    src: url(fonts/digital-7-eigen.ttf);
 }
 
 @font-face {
@@ -31,6 +31,7 @@ body{
     border: 7px solid rgba(255,255,255,0.5);
     border-radius: 20px;
     height: 210px;
+    width: 600px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -60,13 +61,45 @@ body{
 }
 
 .seperator{
+    position: relative;
     animation: dots 2s infinite;
 }
 
+.seperator::after{
+    content: ":";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: rgba(255, 255, 255, 0.137)
+}
+
+.hours{
+    position: relative;
+}
+
+.hours::after{
+    content: "88";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: rgba(255, 255, 255, 0.137)
+}
+
+.minutes{
+    position: relative;
+}
+
+.minutes::after{
+    content: "88";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: rgba(255, 255, 255, 0.137)
+}
 
 
 @keyframes dots {
-    0%{opacity: 1;}
-    50%{opacity: 0;}
-    100%{opacity: 1;}
+    0%{color: white;}
+    50%{color: rgba(255, 255, 255, 0);}
+    100%{color: white;}
 }
