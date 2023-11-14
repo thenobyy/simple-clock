@@ -2,7 +2,9 @@ function setTime() {
   
   let hours = new Date().getHours();
   let minutes = new Date().getMinutes();
-
+  if (minutes.length() < 2){
+    minutes = "0"+minutes;
+  };
   $(".hours").html(hours);
   $(".minutes").html(minutes);
 }
